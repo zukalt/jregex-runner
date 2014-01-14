@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test RegExp java interpreter</title>
+
+<link rel="stylesheet" type="text/css"
+	href="//code.jquery.com/ui/1.10.3/jquery-ui.js" />
+<script type="text/javascript"
+	src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript"
+	src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<meta http-equiv="Content-Type"
+	content="text/html; charset=windows-1252">
+<script language="javascript">
+	function enterNums() {
+
+		// invoke public applet method
+		var jversion = document.regexApplet.javaVersion();
+		alert(jversion);
+	}
+</script>
+
+</head>
+<body>
+	<noscript>A browser with JavaScript enabled is required for
+		this page to operate properly.</noscript>
+	<script src="https://www.java.com/js/deployJava.js"></script>
+	<script>
+	<!-- applet id can be used to get a reference to the applet object -->
+		var attributes = {
+			id : 'regexApplet',
+			code : 'org.devtoolkit.regex.RegexInterpreter',
+			width : 1,
+			height : 1
+		};
+		// this is for debug only, to avoid any type of java caching
+		var parameters = {
+			jnlp_href : '/jnlp/jregex-runner-1.0.jnlp?nocache='
+					+ new Date().getTime()
+		};
+		deployJava.runApplet(attributes, parameters, '1.6');
+	</script>
+	<p>
+		<a href="javascript:enterNums();">Java Version</a>
+	</p>
+</body>
+</html>

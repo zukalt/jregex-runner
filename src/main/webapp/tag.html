@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en-US">
+  <head>
+    <title>Test RegExp java interpreter</title>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script language="javascript">
+		function enterNums(){
+
+            // invoke public applet method
+            var jversion = document.regexApplet.javaVersion();
+			alert(jversion);
+		}
+
+	</script>
+
+  </head>
+  <body>
+    <noscript>A browser with JavaScript enabled is required for this page to operate properly.</noscript>
+	<applet
+		MAYSCRIPT
+		CODE="org.devtoolkit.regex.RegexInterpreter.class"
+		ARCHIVE="jregex-runner-1.0.jar"
+		NAME="regexApplet"
+		id="regexApplet"
+		WIDTH="1" HEIGHT="1">
+			<param name="permissions" value="sandbox" />
+                  If you see this text then Java is disabled in your browser. Please download the Sun Java Plugin from "www.sun.com".
+		</applet>    
+    <p><a href="javascript:enterNums();">Launch Example</a></p>
+  </body>
+</html>

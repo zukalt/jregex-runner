@@ -1,0 +1,11 @@
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+
+  <Set name="handler">
+    <New id="RequestLog" class="org.eclipse.jetty.server.handler.RequestLogHandler">
+      <Set name="requestLog">
+        <New id="RequestLogImpl" class="org.eclipse.jetty.server.NCSARequestLog">
+        </New>
+      </Set>
+    </New>
+  </Set>
+</Configure>
