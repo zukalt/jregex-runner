@@ -69,6 +69,7 @@
 							<Permissions>sandbox</Permissions>
 							<Application-Name>Regular Expression evaluator</Application-Name>
 							<Caller-Allowable-Codebase>*.devtoolkit.org localhost</Caller-Allowable-Codebase>
+							<Application-Library-Allowable-Codebase>*.devtoolkit.org *.devtoolkit.org/static/jnlp localhost</Application-Library-Allowable-Codebase>
 						</manifestEntries>
 					</archive>
 				</configuration>

@@ -62,6 +62,26 @@ public class RegexInterpreter extends Applet {
 		return pattern != null ? pattern.matcher(input) : null;
 	}
 
+	
+	public String replaceAll(String input, String replacement) {
+		try {
+			return matcher(input).replaceAll(replacement);
+		}
+		catch(Exception e) {
+			_lastError = e.getMessage();
+		}
+		return null;
+	}
+	
+	public String replaceFirst(String input, String replacement) {
+		try {
+			return matcher(input).replaceFirst(replacement);
+		}
+		catch(Exception e) {
+			_lastError = e.getMessage();
+		}
+		return null;
+	}
 	/**
 	 * 
 	 * @return last error occurred during compile.
